@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pug</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkzBNE8aKAwixLkQnepnT1IMXbrrtZtJ6xS3Zj1KHE7P6I+ONb2FgfXLQQ6oI5mI1W7ok8Pa1rRV1MQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkzBNE8aKAwixLkQnepnT1IMXbrrtZtJ6xS3Zj1KHE7P6I+ONb2FgfXLQQ6oI5mI1W7ok8Pa1rRV1MQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="icon" href="" type="image/x-icon">
+    <style>
+        body {
+            font-family: "Lora", serif;
+            background: linear-gradient(to right, #10633D 0%, #1A915A 100%);
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        .content {
+            padding: 20px;
+            padding-top: 80px; /* Add padding to avoid overlay by marquee */
+            text-align: center;
+        }
+        .content h1 {
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .photo-section {
+            margin: 20px 0;
+        }
+        .photo-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .photo-section img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(to right, #10633D 0%, #1A915A 100%);
+        }
+        .footer .icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 15px;
+        }
+        .footer .icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+        }
+        .footer .privacy-policy {
+            display: block;
+            margin-bottom: 10px;
+            color: #0D1117;
+            text-decoration: none;
+        }
+        .footer .copyright {
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .marquee-content {
+                font-size: 12px;
+            }
+            .content {
+                padding: 10px;
+                padding-top: 80px; /* Add padding to avoid overlay by marquee */
+            }
+            .content h1 {
+                font-size: 2rem;
+            }
+            .photo-section h2 {
+                font-size: 1.2rem;
+            }
+            .photo-section img {
+                width: 90%;
+            }
+            .icons {
+                gap: 20px;
+            }
+            .icons a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-content">
+        <div class="content">
+            <h1>My Pug</h1>
+            <div class="photo-section">
+                <h2>January 2023</h2>
+                <img src="images/kris1.JPG" alt="Pug Photo 1">
+            </div>
+            <div class="line"></div>
+            <div class="photo-section">
+                <h2>February 2023</h2>
+                <img src="images/kris2.jpg" alt="Pug Photo 2">
+            </div>
+            <div class="line"></div>
+            <div class="photo-section">
+                <h2>March 2023</h2>
+                <img src="images/kris3.JPG" alt="Pug Photo 3">
+            </div>
+            <div class="line"></div>
+            <div class="photo-section">
+                <h2>April 2023</h2>
+                <img src="images/kris4.jpg" alt="Pug Photo 4">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="icons">
+                <a href="mailto:alik.zaryzkyy@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/alex-zarytskyi-7b2248193/">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="https://github.com/AA-4444">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://x.com/Alex34909682">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="pug.html">
+                      <i class="fas fa-paw"></i>
+                    </a>
+            </div>
+            <a href="index.html" class="privacy-policy">Back to home</a>
+            <div class="copyright">© 2024 made by Oleksii Zarytskyi</div>
+        </div>
+    </div>
+
+</body>
+</html>

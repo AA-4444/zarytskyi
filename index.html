@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница Oleksii Zarytskyi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <span class="name">Oleksii Zarytskyi</span>
+    </div>
+
+    <div class="developer-container">
+        <video autoplay muted loop class="bg-video">
+            <source src="images/video1.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+            Your browser does not support the video tag.
+        </video>
+        <p class="developer-text">IOS Developer</p>
+        <p class="developer-text">Web Developer</p>
+    </div>
+    
+    <div class="content fade-in">
+        <h1>About Me</h1>
+        <p>I'm a software developer from Kyiv, Ukraine currently residing in Wroclaw, Poland. I specialize in SwiftUI and Swift, crafting elegant iOS applications. I'm also a web developer, blending functionality with aesthetic design. You can contact me and I can serve you in English, Polish, Ukrainian and implement your ideas.</p>
+    </div>
+
+    <div class="skills-container fade-in">
+        <h2 class="skills-title">Programming Languages and Databases That I Use</h2>
+        <h2 class="skills-title-mobile">Programming Languages<br> and<br> Databases That I Use</h2>
+        <div class="skills-grid">
+            <div class="skill">SwiftUI</div>
+            <div class="skill">Swift</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PHP</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">SQL</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Firebase</div>
+        </div>
+    </div>
+
+    <div class="ide-container fade-in">
+        <h2 class="ide-title">Integrated Development Environments</h2>
+        <div class="ide-row">
+            <div class="ide-text gradient-text">Xcode</div>
+            <div class="ide-text black-text">For iOS development, I use Xcode environment, where I actively enhance my skills in SwiftUI and Swift.</div>
+        </div>
+        <div class="ide-row">
+            <div class="ide-text gradient-text">VScode</div>
+            <div class="ide-text black-text">To realize the wishes of clients when creating websites, I use Visual Studio Code environment.</div>
+        </div>
+        <div class="ide-row">
+            <div class="ide-text gradient-text">Figma</div>
+            <div class="ide-text black-text">For working with client designs, I use Figma for its robust design features, which enable me to accurately follow and implement user interfaces and user experience designs.</div>
+        </div>
+    </div>
+
+    <div class="explore-container">
+        <a href="portfolio.html" class="explore-button">Explore</a>
+    </div>
+
+    <div class="footer">
+        <div class="icons">
+            <a href="mailto:alik.zaryzkyy@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alex-zarytskyi-7b2248193/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/AA-4444">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://x.com/Alex34909682">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="pug.html">
+                <i class="fas fa-paw"></i>
+            </a>
+        </div>
+        <a href="#" class="privacy-policy">Privacy Policy</a>
+        <div class="copyright">© 2024 made by Oleksii Zarytskyi</div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once it has appeared
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => {
+            observer.observe(el); // Start observing each element
+        });
+    });
+    </script>
+</body>
+</html>
