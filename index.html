@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <!-- Loading Screen -->
+ <div id="loading-screen">
+    <div id="loading-text">0%</div>
+</div>
+
     <div class="top-bar">
         <span class="name">Oleksii Zarytskyi</span>
     </div>
@@ -112,5 +117,30 @@
         });
     });
     </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const loadingText = document.getElementById("loading-text");
+        let percentage = 0;
+
+        // Add the loading-active class to the body to disable scrolling
+        document.body.classList.add('loading-active');
+
+        // Function to increment the loading percentage
+        const loadingInterval = setInterval(() => {
+            if (percentage < 100) {
+                percentage++;
+                loadingText.textContent = percentage + "%";
+            } else {
+                clearInterval(loadingInterval); // Stop the interval when 100% is reached
+                loadingScreen.classList.add('hidden'); // Hide the loading screen
+                document.body.classList.remove('loading-active'); // Allow scrolling again
+            }
+        }, 30); // Adjust the speed of loading here (30ms per increment)
+    });
+</script>
+
+    
 </body>
 </html>
+
