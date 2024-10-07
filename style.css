@@ -13,6 +13,40 @@ html,body {
      overflow-x: hidden !important;
      width: 100%;
 }
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #10633D 0%, #1A915A 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's above all other content */
+    transition: opacity 0.5s ease; /* Smooth fading effect */
+    pointer-events: none; /* Prevent interaction during loading */
+}
+
+#loading-text {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Hide loading screen after it's done */
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Delayed visibility removal */
+}
+
+/* Add body overflow hidden when the loading screen is active to prevent scrolling */
+body.loading-active {
+    overflow: hidden;
+}
 
 .top-bar {
     background: linear-gradient(to right, #10633D 0%, #1A915A 100%);
